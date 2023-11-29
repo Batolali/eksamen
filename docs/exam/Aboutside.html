@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <!-- Hodet inneholder metadata og lenker til stilark og skript -->
+    <!-- tittelen som vises i nettleserens fane. open Graph og twitter cards metadata for å kontrollere hvordan innhold ser ut når det deles på sosiale medier-->
+
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>Webutvikling</title>
+  
+  <meta property="og:url" content="https://itstud.hiof.no/~batolna/exam/Aboutside.html">
+  <meta property="og:type" content="Produkt" >
+  <meta property="og:title" content=" Nettbutikk" >
+  <meta property="og:description" content="Oppdag vårt brede utvalg av produkter " >
+  <meta property="og:image" content="https://itstud.hiof.no/~batolna/exam/photo/headimg.jpg">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:domain" content="itstud.hiof.no">
+  <meta property="twitter:url" content="https://itstud.hiof.no/~batolna/exam/Aboutside.html">
+  <meta name="twitter:title" content="Nettbutikk ">
+  <meta name="twitter:description" content="Oppdag vårt brede utvalg av produkter">
+  <meta name="twitter:image" content="https://itstud.hiof.no/~batolna/exam/photo/headimg.jpg"/>
+
+</head>
+<body itemscope itemtype="https://schema.org/Organization">
+  <nav role="navigation" >
+    <p itemprop="image"><a href="forside.html"><img src="photo/logo1.png" alt="logo" /></a></p>
+        <ul>
+          <li><a href="forside.html">Home</a></li>
+          <li><a href="Portfolio.html" >Portfolio</a></li>
+          <li class="activ"><a href="Aboutside.html" >About</a></li>
+          <li><a class="button" href="#B4">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="Company" role="banner">
+      <section class="Company_info">
+        <h1 itemprop="name">Company name</h1>
+        <h2>About Our Company</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor consectetur adipiscing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore consectetur adipiscing elit, sed do eiusmod tempor magna aliqua.</p>
+        <p><a href="#B4" class="button">Get in touch with us</a></p>
+      </section>
+        
+    </header>
+    
+    <main role="main" >
+      <article class="services" role="article" >
+        <h2>Our services</h2>
+            <section>
+              <i class="fa-solid fa-users fa-xl"></i>
+              <h3>Branding</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </section>
+            <section>
+              <i class="fa-solid fa-cloud-arrow-up fa-xl"></i>
+              <h3>Design</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </section>
+            <section>
+              <i class="fa-solid fa-code fa-xl"></i>
+              <h3>Development</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </section>
+            <section>
+                <i class="fa-solid fa-wifi fa-xl"></i>
+                <h3>Support</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </section>
+    </article>
+                                    
+    <article class="logos" role="article" >
+      <h2>Some of our cilent</h2> 
+        <section>
+          <img src="photo/logo1.png" alt="logo">
+          <img src="photo/logo2.png" alt="logo">
+          <img src="photo/logo3.png" alt="logo">
+        </section>
+      </article>
+
+      <article class="contact" id="B4">
+        <h2> Contact us</h2>
+        <section class="button-form">
+          <h3>Send us a message</h3>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Name">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Subject">
+            <label for="message">Message:</label>
+            <textarea placeholder="Message" id="message"></textarea>
+          </form>
+          <p><a href="#B4" class="button">Send message</a></p>
+        </section>
+          
+        <section class="right-panel" role="contentinfo">
+          <h3>Contact information</h3>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint</p>
+          <p itemprop="address"><i class="fas fa-map-marker-alt"></i> B R A Veien 4, 1757 Halden</p>
+          <p itemprop="telephone"><i class="fas fa-phone"></i> 69 60 80 00</p>
+          <p itemprop="email"><i class="fas fa-envelope"></i> <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a></p>
+        </section>
+      </article>
+
+
+      <section class="map">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.123456789012!2d11.1755106!3d59.190909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f0d344246f%3A0x4e47f19c99b253b1!2sHøgskolen+i+Østfold%2C+B+R+A+Veien+4%2C+1757+Halden!5e0!3m2!1sen!2sno!4v1234567890123"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </section>
+      <div class="up"><a href="#" role="button"><img src="photo/pil.png" alt="Go to top button"></a></div>
+
+    </main>
+
+    <footer role="contentinfo" >
+      <p><a href="forside.html"><img src="photo/logo1.png" alt="logo" /></a></p>
+      <p>Company copyright 2023</p>
+      <ul class="oss">
+          <li><a href="https://www.facebook.com/hiofnorge/"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/hiofnorge/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/school/hogskolen-i-ostfold/"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+
+  </footer>
+</body>
+      
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        

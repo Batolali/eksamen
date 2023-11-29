@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+	font-size: 20px;
+	background-color: #fff;
+	display: grid;
+    grid-template-areas: 
+    "nav nav nav" 
+    "header header header" 
+    "main main main" 
+    "footer footer footer";
+	grid-template-columns:auto auto auto;
+	grid-template-rows: auto auto auto auto;
+	grid-gap:10px;
+    margin: 0px;
+}
+
+
+/********************************************* nav */
+nav{
+    grid-area: nav;
+    background-color: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height: 150px;
+    padding: 10px;
+}
+
+/********************************************* heads */
+
+header{
+    grid-area: header;
+    background-image: url(../photo/image0.jpg);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items	: center;
+    height: 400px;
+    width: 100%;
+    margin: 0px;
+}
+
+.for_head video{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    z-index: 0;
+    object-fit: cover;
+}
+
+header section{
+    display:flex;
+    flex-direction:column;
+    position: absolute;
+    align-items	: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+
+.head_text{
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.protfolio_head{
+    width:100%;
+    height: 400px;
+    background: #d5e5eb95;
+    display:flex;
+    flex-direction:column;
+    position: absolute;
+    align-items	: center;
+    justify-content: center;
+}
+
+.Company_info{
+    width:45%;
+    height: 340px;
+    background: #d5e5eb95;
+    display:flex;
+    flex-direction:column;
+    align-items	: flex-start;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+
+}
+
+.Company_info h2{
+    text-align: left;
+}
+
+.Company{
+    display:flex;
+    align-items	: flex-end;
+}
+
+
+/********************************************* main */
+main{
+    grid-area: main;
+}
+
+main article{
+    display:flex;
+    flex-direction:column;
+    align-items	: center;
+    padding: 10px 0px;
+}
+
+p{
+    padding: 10px;
+    margin: 0px;
+}
+
+h1, h3{
+    margin: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h2{
+    display: inline;
+    width: 95%;
+    margin: 10px;
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+	list-style-type: none;
+    display:flex;
+    flex-direction:row;
+}
+li{
+    margin: 5px;
+    padding:5px;
+}
+.button{
+    padding: 5px;
+    background-color: #d8c707;
+    font-weight: bold;
+    border: solid 1px;
+}
+
+input{
+    border: solid 1px rgb(218, 214, 214);
+    height: 30px;
+}
+
+textarea{
+    height: 80px;
+    margin: 10px 0px 20px 0px;
+    border: solid 1px rgb(218, 214, 214);
+}
+
+.activ{
+    border-bottom:solid 2px #d8a707;
+    font-weight: bold;
+}
+
+.up{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
+}
+
+
+/********************************************* forside */
+.abot_company{
+    display:flex;
+    flex-direction:row;
+    background-color: #d8c707;
+    padding: 40px 50px;
+}
+
+.abot_company img{
+    width: 400px;
+    height:  400px;
+    margin-right: 30px;
+}
+
+.abot_company p{
+    width: 80%;
+}
+.services{
+    display:flex;
+    flex-direction:row;
+    margin: 0px 50px;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.services section{
+    padding: 10px 30px;
+    text-align: center;
+    width: 200px;
+}
+
+.sing_up{
+    background-color: rgb(181, 179, 179);
+    padding-bottom: 30px;
+}
+
+/********************************************* protfolio */
+.under_line{
+    border-bottom:solid 3px #d8a707;
+    padding: 10px 5px;
+    margin: 15px 5px;
+    text-align: left;
+}
+.explore li{
+    padding: 5px;
+    background-color: #fff;
+    font-weight: bold;
+    border: solid 1px;
+}
+
+.protfolio article{
+    display:flex;
+    flex-direction:column;
+    align-items	: flex-start; 
+}
+
+.Branding{
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.Branding figure{
+    flex: 1 0 300px;
+    max-width: 700px;
+    min-width: 400px;
+    margin: 15px;
+}
+
+.protfolio article img{
+    width: 100%;
+    height: auto;
+}
+
+.img_stor{
+    width: 45%;
+}
+
+.img_stor img{
+    width: 100%;
+
+}
+
+.design{
+    display: flex;
+    flex-direction: row;
+}
+
+.design figure{
+    width: 45%;
+}
+
+/********************************************* aboutside */
+.logos{
+    background-color: #d8c707;
+}
+
+.logos section{
+margin: 20px; 
+display:flex;
+justify-content:space-around;   
+width: 80%;
+margin: 20px; 
+flex-wrap: wrap;
+}
+
+
+.logos img{
+    margin: 0px 30px;
+}
+
+.contact{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;   
+    flex-wrap: wrap;
+    align-items:flex-start;
+}
+
+.contact section{
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.contact form{
+    display:flex;
+    flex-direction: column;
+}
+
+.right-panel p{
+    padding: 10px;
+}
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:0;
+}
+
+
+/********************************************* footer */
+footer{
+    grid-area: footer;
+    background-color: black;
+    color: #fff;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    padding: 0px 30px;
+    height: 300px;
+}
+.oss a{
+    color: #fff;
+    font-size:xx-large;
+}
+
+
+/********************************************* hover */
+.button:hover{
+    background-color: black;
+    color: #d8a707;
+}
+.protfolio li:hover{
+    background-color: black;
+}
+.protfolio a:hover{
+    color: #d8a707;
+}
+
+.img_stor:hover{
+    width: 48%;
+    transition: 0.4s;
+}
+
+.design figure img:hover, .Branding figure img:hover{
+    width: 103%;
+    transition: 0.4s;
+}
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:0;
+}
+/********************************************* mobile */
+
+@media only screen and (max-width: 788px){
+
+    body{
+        font-size:18px;
+        grid-template-areas: 
+        "nav" 
+        "header" 
+        "main" 
+        "footer";
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto auto;
+
+    }
+
+    nav{
+        background-color: #fff;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:space-between;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav ul{
+        list-style-type: none;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding: 0px;
+    }
+/***********************header*************************************/
+    header{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items	: center;
+        height: 400px;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .for_head video{
+        display: none;
+    }
+    header section{
+        background-color:#d5e5eb95;
+        width: 100%;
+        height: 400px;
+    }
+    .head_text{
+        padding: 20px;
+        width: 80%;
+        text-align: center;
+    }
+    
+/**********************forside***********************************/
+    .abot_company{
+        flex-direction:column;
+        justify-content:center;
+        padding: 40px 50px;
+    }
+    
+    .abot_company img{
+        width: 95%;
+        height:  auto;
+        margin-bottom: 20px;
+        margin-right: 0px
+    }
+
+    .abot_company p{
+        width: 100%;
+    }
+/*********************protfolio****************************/        
+    .explore ul{
+        flex-wrap: wrap;
+    }
+
+    .protfolio article{
+        align-items: center;
+    }
+    
+    .design, .Branding{
+        flex-direction:column;
+        align-items	: center;
+    }
+    
+    .design figure img, .Branding figure img, .img_stor img{
+        width: 90%;
+        margin: 5px;
+    }    
+ 
+    .design figure, .Branding figure, .img_stor{
+        display: flex;
+        flex-direction:column;
+        align-items	: center;
+        width: 90%;
+        margin: 5px;
+    }
+
+    .design picture, .Branding picture, .img_stor picture{
+        display: flex;
+        flex-direction:column;
+        align-items	: center;
+    }
+
+/******************************************* aboutside*****************************************/
+    .Company_info{
+        width: 80%; 
+        margin: 20px;
+        padding: 20px;
+        height: auto;
+    }
+    .Company{
+        align-items	: center;
+    }    
+    .contact{
+        display:flex;
+        flex-direction: column;
+    }
+    .contact section{
+        width: 80%;
+        margin: 10px;
+        padding: 10px;
+    }
+
+/*********************footer******************************/
+    footer{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-between;
+        padding: 0px 0px;
+        height: auto;
+    }
+    
+    footer ul{
+        flex-direction:row;
+        padding: 0px;
+    }
+
+
+/***************************************************/
+.button:hover{
+    background-color: #d8c707;
+    color: initial;
+}
+.protfolio li:hover{
+    background-color:initial;
+}
+.protfolio a:hover{
+    color:initial;
+}
+
+.img_stor:hover, .design figure img:hover, .Branding figure img:hover{
+    width: 90%;
+}
+
+
+}
