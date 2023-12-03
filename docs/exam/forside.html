@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="nb">
 <head>
-    <!----
-    ehjfyegfyurhyufh-->
+<!-- 
+head: seksjonen inneholder viktige metadata og koblinger.meta definerer tegnsettet og visningsinnstillingene for mobile enheter
+Link: henter inn eksterne CSS-ark for normalisering av stil, ikonfontene fra Font Awesome, og et tilpasset stilark
+title: elementet setter tittelen som vises i nettleserfanen
+De meta-taggene er for sosiale medier-optimalisering og hjelper med å definere hvordan siden vil se ut når den deles på plattformer som Facebook og Twitter -->
 	<meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- lenker til eksterne CSS-stilark . Font Awesome for ikoner, og et eget stilark-->
 	<title>Webutvikling</title>
-    <!-- tittelen som vises i nettleserens fane. open Graph og twitter cards metadata for å kontrollere hvordan innhold ser ut når det deles på sosiale medier-->
     <meta property="og:url" content="https://itstud.hiof.no/~batolna/exam/forside.html">
   <meta property="og:type" content="Produkt" >
   <meta property="og:title" content="Din Nettbutikk - Kvalitetsprodukter for Alle" >
@@ -25,10 +26,11 @@
   <meta name="twitter:image" content="https://itstud.hiof.no/~batolna/exam/photo/headimg.jpg"/>
 
 </head>
+<!-- Dette er hoveddelen av HTML-dokumentet. itemscope og itemtype er del av mikrodata som hjelper 
+    søkemotorer å forstå innholdet på siden. -->
 <body itemscope itemtype="https://schema.org/WebSite">
-    <!--inneholder alt det synlige innholdet på siden-->
+    <!--Navigasjonsseksjonen den inneholder en logo som fungerer som en hjem-lenke, samt en liste (ul) av lenker (a) for navigasjon på nettstedet-->
     <nav>
-        <!-- logo som fungerer som lenke til hjemmesiden-->
         <p><a href="forside.html" itemprop="image"><img src="photo/logo1.png" alt="logo" /></a></p>
         <ul>
             <!-- liste av navigasjonslenker til ulike deler av nettstedet-->
@@ -38,7 +40,8 @@
             <li><a class="button" href="Aboutside.html#B4">Contact</a></li>
         </ul>
     </nav>
-
+<!---Dette er toppseksjonen av siden. Den inneholder en section med en overskrift h1 og en introduksjonstekst,
+     samt en knapp (a class="button"). Det er også en (video) tagg som spiller en bakgrunnsvideo. -->
     <header class="for_head">
         <section>
             <h1>Compeling headline</h1>
@@ -72,10 +75,10 @@
             </section>
         </article>
 
-        <!-- artiklen services bruker Font Awesome ikoner for å gir fremstilling av tjenester-->        <article class="services" id="B5">
+        <!-- artiklen services bruker Font Awesome ikoner for å gir fremstilling av tjenester-->    
+            <article class="services" id="B5">
             <!-- Et underoverskrift h3for hver tjeneste. alle merket som Brandingher. disse variere avhengig av hver tjeneste.-->
-            <!-- avsnitt p med beskrivende tekst(Lorem Ipsum).
--->
+            <!-- avsnitt p med beskrivende tekst(Lorem Ipsum)-->
             <h2>Our services</h2>
                 <section>
                     <i class="fa-solid fa-users fa-xl"></i>
