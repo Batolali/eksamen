@@ -8,14 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<title>Webutvikling</title>
-  
+	<!--Angir tittelen på nettsiden, som vises i nettleserens faner-->
+  <title>Webutvikling</title>
   <meta property="og:url" content="https://itstud.hiof.no/~batolna/exam/Aboutside.html">
   <meta property="og:type" content="Produkt" >
   <meta property="og:title" content=" Nettbutikk" >
   <meta property="og:description" content="Oppdag vårt brede utvalg av produkter " >
   <meta property="og:image" content="https://itstud.hiof.no/~batolna/exam/photo/headimg.jpg">
- 
+ <!-- Tilsvarende metadata for deling på Twitter-->
   <meta name="twitter:card" content="summary">
   <meta property="twitter:domain" content="itstud.hiof.no">
   <meta property="twitter:url" content="https://itstud.hiof.no/~batolna/exam/Aboutside.html">
@@ -24,18 +24,26 @@
   <meta name="twitter:image" content="https://itstud.hiof.no/~batolna/exam/photo/headimg.jpg"/>
 
 </head>
+<!--- Starter hoveddelen av HTML-dokumentet og angir at innholdet representerer en organisasjon-->
 <body itemscope itemtype="https://schema.org/Organization">
   <nav role="navigation" >
+    <!-- Definerer en navigasjonsblokk, som hjelper med tilgjengelighet-->
+    <!-- Inneholder et bilde logo som er linket til hjemmesiden.-->
     <p itemprop="image"><a href="forside.html"><img src="photo/logo1.png" alt="logo" /></a></p>
         <ul>
+          <!-- En usortert liste som representerer hovednavigasjonslenkene på nettsiden-->
           <li><a href="forside.html">Home</a></li>
           <li><a href="Portfolio.html" >Portfolio</a></li>
           <li class="activ"><a href="Aboutside.html" >About</a></li>
           <li><a class="button" href="#B4">Contact</a></li>
         </ul>
     </nav>
+    <!-- Avslutter navigasjonsblokken-->
+    <!-- en header-seksjon for nettsiden, inneholder viktig informasjon som logo.-->
     <header class="Company" role="banner">
       <section class="Company_info">
+        <!-- En seksjon som gir informasjon om selskapet, som f.eks. navn og en kort beskrivelse.-->
+        <!-- En overskrift for selskapets navn-->
         <h1 itemprop="name">Company name</h1>
         <h2>About Our Company</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor consectetur adipiscing elit,
@@ -44,11 +52,13 @@
       </section>
         
     </header>
-    
+    <!-- Definerer hovedinnholdet på siden-->
     <main role="main" >
+      <!-- En artikkel som beskriver tjenestene selskapet tilbyr.-->
       <article class="services" role="article" >
         <h2>Our services</h2>
             <section>
+              <!--en seksjoner for hver tjeneste, med ikoner fra Font Awesome-biblioteket for å visualisere tjenesten-->
               <i class="fa-solid fa-users fa-xl"></i>
               <h3>Branding</h3>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -69,7 +79,7 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </section>
     </article>
-                                    
+    <!-- En annen artikkel som viser logoene til noen av selskapets kunder-->                           
     <article class="logos" role="article" >
       <h2>Some of our cilent</h2> 
         <section>
@@ -78,7 +88,7 @@
           <img src="photo/logo3.png" alt="logo">
         </section>
       </article>
-
+<!-- En kontaktseksjon med et skjema for besøkende å fylle ut.-->
       <article class="contact" id="B4">
         <h2> Contact us</h2>
         <section class="button-form">
@@ -91,9 +101,13 @@
             <label for="message">Message:</label>
             <textarea placeholder="Message" id="message"></textarea>
           </form>
+       <!-- Avslutter skjemaet -->
+<!-- Dette er en knapp som er implementert som <a> element. 
+  href="#B4" indikerer at når knappen klikkes, vil siden rulle til elementet med ID B4-->
           <p><a href="#B4" class="button">Send message</a></p>
         </section>
-          
+        <!-- En seksjon som inneholder kontaktopplysninger. 
+          role=contentinfo indikerer at dette er informasjonsinnhold-->
         <section class="right-panel" role="contentinfo">
           <h3>Contact information</h3>
           <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint</p>
@@ -102,7 +116,7 @@
           <p itemprop="email"><i class="fas fa-envelope"></i> <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a></p>
         </section>
       </article>
-
+<!--En seksjon med et innebygd Google Kart for å vise selskapets lokasjon.-->
 
       <section class="map">
         <iframe
@@ -114,7 +128,7 @@
       <div class="up"><a href="#" role="button"><img src="photo/pil.png" alt="Go to top button"></a></div>
 
     </main>
-
+<!-- Bunnteksten på siden, som inneholder copyright informasjon, sosiale medier lenker, og en gjentagelse av logoen -->
     <footer role="contentinfo" >
       <p><a href="forside.html"><img src="photo/logo1.png" alt="logo" /></a></p>
       <p>Company copyright 2023</p>
@@ -125,8 +139,9 @@
       </ul>
 
   </footer>
+  <!-- slutten på hovedinnholdet i dokumentet-->
 </body>
-      
+      <!-- Avslutter HTML-dokumentet-->
 </html>
 
 

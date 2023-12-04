@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* Importerer skrifttypen Poppins fra Google Fonts. Dette gir stilalternativer for skriften*/
 body{
+
+/*Setter standard skriftstørrelse for hele websiden til 20 piksler 
+Definerer bakgrunnsfargen til websiden som hvit.
+display: grid: Anvender et grid-basert layout for <body>-elementet. Dette muliggjør mer kompleks layout-styring ved bruk av rutenett
+grid-template-areas: Definerer et malområde for forskjellige deler av websiden. Det er fire områder opprettet her: nav, header, main, og footer
+grid-template-columns: Setter opp tre kolonner i rutenettet, hvor hver kolonne automatisk tilpasser seg størrelsen på sitt innhold
+grid-template-rows: Definerer fire rader i rutenettet. Høyden på hver rad settes til å automatisk tilpasse seg innholdet
+grid-gap: Angir en avstand på 10 piksler mellom hver rad og kolonne i rutenettet-
+margin:Fjerner standardmarginen rundt body elementet*/
 	font-size: 20px;
 	background-color: #fff;
 	display: grid;
@@ -17,6 +26,12 @@ body{
 
 
 /********************************************* nav */
+/* background-color: Angir bakgrunnsfargen til hvit.
+display: Gjør elementet til en fleksibel beholder, noe som gjør det lettere å plassere barn-elementer (som linker, logoer, osv.) inni.
+align-items: Sentrerer barn-elementer vertikalt innenfor navigasjonsbaren.
+justify-content: Fordeler barn-elementene jevnt i navigasjonsbaren, med likt mellomrom mellom hvert element.
+height: Setter høyden på navigasjonsbaren til 150 piksler.
+padding: Legger til en indre margin på 10 piksler rundt innholdet i navigasjonsbaren. */
 nav{
     grid-area: nav;
     background-color: #fff;
@@ -28,7 +43,14 @@ nav{
 }
 
 /********************************************* heads */
-
+/* 
+background-image:  Setter en bakgrunnsbilde, 
+display: Gjør elementet til en fleksibel beholder
+flex-direction: Organiserer barn-elementene i en kolonne
+justify-content: Sentrerer barn-elementene vertikalt
+height: Angir høyden på sidehodet til 400 piksler
+width: Gjør at sidehodet strekker seg til full bredde av beholderen
+margin: Setter margen rundt sidehodet til 0 piksler */
 header{
     grid-area: header;
     background-image: url(../photo/image0.jpg);
@@ -40,6 +62,13 @@ header{
     width: 100%;
     margin: 0px;
 }
+/*
+position: Setter posisjoneringen av videoen til relativ, 
+som tillater plassering i forhold til dens normale plassering.
+width:Setter videoens bredde til å fylle hele bredden av sin beholder
+height:Definerer høyden på videoen til 400 piksler
+z-index:Plasserer videoen under andre overlappende elementer
+object-fit:Sikrer at videoen dekker hele området*/
 
 .for_head video{
     position: relative;
@@ -48,7 +77,12 @@ header{
     z-index: 0;
     object-fit: cover;
 }
-
+/* 
+display: Gjør elementet til en fleksibel beholder.
+flex-direction: Organiserer innholdet i en kolonne.
+position:  Posisjonerer seksjonen absolutt i forhold til nærmeste relativt posisjonerte.
+align-items: Sentrerer barn-elementene horisontalt.
+z-index: Setter seksjonen over andre elementer, som videoen */
 header section{
     display:flex;
     flex-direction:column;
@@ -59,12 +93,24 @@ header section{
 
 }
 
+/* 
+padding: Legger til en indre margin på 20 piksler rundt innholdet.
+width: Setter bredden til 50% av sin beholder.
+text-align:  Sentrerer teksten inni elementet.  */
+
 .head_text{
     padding: 20px;
     width: 50%;
     text-align: center;
 }
-
+/* 
+width: Setter bredden til å fylle hele bredden av sin beholder.
+height: Definerer høyden som 400 piksler
+background:Angir en bakgrunnsfarge med en viss grad av gjennomsiktighet 
+display: Gjør elementet til en fleksibel beholder
+flex-direction: Organiserer barn-elementene vertikalt
+position: Posisjonerer elementet absolutt i forhold til nærmeste relativt posisjonerte .
+justify-content: Sentrerer barn-elementene vertikalt.*/
 .protfolio_head{
     width:100%;
     height: 400px;
@@ -75,6 +121,17 @@ header section{
     align-items	: center;
     justify-content: center;
 }
+/*
+width:Setter bredden til 45% av sin beholder.
+height:Definerer høyden som 340 piksler.
+background: Setter en bakgrunnsfarge med gjennomsiktighet.
+display: Gjør elementet til en fleksibel beholder.
+flex-direction: Organiserer barn-elementene vertikalt.
+align-items: Justerer barn-elementene til starten av beholderen (venstre kant).
+justify-content: Sentrerer barn-elementene vertikalt.
+margin: Setter en ytre margin på 20 piksler.
+padding: Setter en indre margin på 20 piksler.
+text-align: Justerer teksten til venstre.*/
 
 .Company_info{
     width:45%;
@@ -89,11 +146,12 @@ header section{
     text-align: left;
 
 }
-
+/* text-align: Justerer teksten i h2-elementer innenfor Company_info til venstre.  */
 .Company_info h2{
     text-align: left;
 }
-
+/* display: Gjør elementet til en fleksibel beholder.
+align-items:Justerer barn-elementene mot slutten av beholderen */
 .Company{
     display:flex;
     align-items	: flex-end;
@@ -101,69 +159,107 @@ header section{
 
 
 /********************************************* main */
+/* grid-area: Plasserer elementet i et område main i en CSS Grid-layout.*/
 main{
     grid-area: main;
 }
-
+/* 
+display: Gjør elementet til en fleksibel beholder.
+flex-direction: Organiserer barn-elementene vertikalt.
+align-items: cSentrerer barn-elementene horisontalt.
+padding: Setter en indre margin på 10 piksler på toppen og bunnen. */
 main article{
     display:flex;
     flex-direction:column;
     align-items	: center;
     padding: 10px 0px;
 }
-
+/* 
+padding: Setter en indre margin på 10 piksler.
+margin: Fjerner ytre margin. */
 p{
     padding: 10px;
     margin: 0px;
 }
-
+/* 
+margin: Setter en ytre margin på 10 piksler.
+font-family: Definerer skrift for tekst */
 h1, h3{
     margin: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+/* 
+display:Gjør elementet inline, slik at det ikke tar opp hele bredden.
+width:Setter bredden til 95% av sin beholder. 
+margin:Setter en ytre margin på 10 piksler.
+text-align:Sentrerer teksten*/
 h2{
     display: inline;
     width: 95%;
     margin: 10px;
     text-align: center;
 }
-
+/* 
+color:Setter tekstfargen til svart.
+text-decoration:Fjerner understreking fra lenker. */
 a{
     color: black;
     text-decoration: none;
 }
-
+/* 
+list-style-type:  Fjerner listemarkører.
+display: flex;: Gjør elementet til en fleksibel beholder.
+flex-direction:Organiserer listeelementene horisontalt.  */
 ul{
 	list-style-type: none;
     display:flex;
     flex-direction:row;
 }
+
+/* 
+margin:Setter en ytre margin på 5 piksler.
+padding:Setter en indre margin på 5 piksler. */
 li{
     margin: 5px;
     padding:5px;
 }
+/* 
+padding: Setter en indre margin på 5 piksler.
+background-color: Setter bakgrunnsfargen.
+border: Legger til en 1 piksel solid kantlinje.*/
 .button{
     padding: 5px;
     background-color: #d8c707;
     font-weight: bold;
     border: solid 1px;
 }
-
+/*
+ border: Legger til en grå solid kantlinje.
+height: Setter høyden på inputfeltet til 30 piksler. */
 input{
     border: solid 1px rgb(218, 214, 214);
     height: 30px;
 }
-
+/* 
+height:Setter høyden til 80 piksler.
+margin:Angir marginer med 10 piksler på toppen, 0 piksler på høyre, 20 piksler på bunnen, og 0 på venstre.
+border:Setter en solid 1 piksel grå kantlinje. */
 textarea{
     height: 80px;
     margin: 10px 0px 20px 0px;
     border: solid 1px rgb(218, 214, 214);
 }
-
+/* 
+border-bottom:Setter en solid 2 piksler gul kantlinje i bunnen.*/
 .activ{
     border-bottom:solid 2px #d8a707;
     font-weight: bold;
 }
+/* 
+position: Elementet vil bli fast plassert.
+bottom:40 piksler fra bunnen av skjermen.
+right: 40 piksler fra høyre side av skjermen.
+z-index: Elementet vil ligge over andre elementer.*/
 
 .up{
     position: fixed;
@@ -174,22 +270,39 @@ textarea{
 
 
 /********************************************* forside */
+/* 
+display:Elementet er en flex-container.
+flex-direction:Barn-elementene er organisert horisontalt.
+background-color:Bakgrunnsfargen er gul.
+padding: Indre margin på 40 piksler på topp/bunn og 50 piksler på venstre/høyre.*/
 .abot_company{
     display:flex;
     flex-direction:row;
     background-color: #d8c707;
     padding: 40px 50px;
 }
-
+/*
+width: Bildets bredde er 400 piksler.
+height:Bildets høyde er 400 piksler.
+margin-right:Margin på 30 piksler til høyre.*/
 .abot_company img{
     width: 400px;
     height:  400px;
     margin-right: 30px;
 }
+/*
+ width:Bredde satt til 80% av forelder-elementet.
+ */
 
 .abot_company p{
     width: 80%;
 }
+/* 
+display: Elementet er en flex-container.
+flex-direction:Barn-elementene er organisert horisontalt.
+margin:Ytre margin 0 på topp/bunn og 50 piksler på venstre/høyre.
+flex-wrap: Tillater elementer å bryte til neste linje.
+justify-content:Sentrerer elementer horisontalt i beholderen.*/
 .services{
     display:flex;
     flex-direction:row;
@@ -197,37 +310,60 @@ textarea{
     flex-wrap: wrap;
     justify-content:center;
 }
+/* 
+padding:Indre margin på 10 piksler på topp/bunn og 30 piksler på venstre/høyre.
+text-align:Sentrerer teksten.
+width:Bredde satt til 200 piksler. */
 .services section{
     padding: 10px 30px;
     text-align: center;
     width: 200px;
 }
-
+/* 
+background-color:Bakgrunnsfarge i en lys gråtone.
+padding-bottom:Indre margin på 30 piksler på bunnen. */
 .sing_up{
     background-color: rgb(181, 179, 179);
     padding-bottom: 30px;
 }
 
 /********************************************* protfolio */
+/* 
+border-bottom:En solid 3 piksler gul kantlinje i bunnen.
+padding:Indre margin på 10 piksler på topp/bunn og 5 piksler på venstre/høyre.
+margin:Ytre margin på 15 piksler på topp/bunn og 5 piksler på venstre/høyre.
+text-align:Teksten justert til venstre.*/
 .under_line{
     border-bottom:solid 3px #d8a707;
     padding: 10px 5px;
     margin: 15px 5px;
     text-align: left;
 }
+/* 
+padding: Indre margin på 5 piksler.
+background-color:Bakgrunnsfarge er hvit.
+font-weight:Teksten er fet.
+border:En solid 1 piksel kantlinje rundt.*/
 .explore li{
     padding: 5px;
     background-color: #fff;
     font-weight: bold;
     border: solid 1px;
 }
-
+/* display:Elementet er en flex-container.
+flex-direction:Barn-elementene er organisert vertikalt.
+align-items: Elementene er justert til venstre (start) av beholderen */
 .protfolio article{
     display:flex;
     flex-direction:column;
     align-items	: flex-start; 
 }
 
+/* width:Bredde satt til 100% av forelder-elementet.
+display:Elementet er en flex-container.
+flex-direction:Barn-elementene er organisert horisontalt.
+justify-content:Elementene er justert til venstre (start) av beholderen.
+flex-wrap:Tillater elementer å bryte til neste linje. */
 .Branding{
     width: 100%;
     display:flex;
@@ -236,7 +372,11 @@ textarea{
     flex-wrap: wrap;
     
 }
-
+/* 
+flex:  Elementet vil vokse og krympe, med en basisbredde på 300 piksler.
+max-width:Maksimal bredde på 700 piksler.
+min-width: Minimal bredde på 400 piksler.
+margin: Ytre margin på 15 piksler.*/
 .Branding figure{
     flex: 1 0 300px;
     max-width: 700px;
@@ -244,19 +384,27 @@ textarea{
     margin: 15px;
 }
 
+/* 
+width:Bredde satt til 100% av forelder-elementet.
+height:Høyden settes automatisk for å bevare bildeforholdet. */
 .protfolio article img{
     width: 100%;
     height: auto;
 }
-
+/* 
+width:Bredde satt til 45% av forelder-elementet.
+ */
 .img_stor{
     width: 45%;
 }
-
+/* width: Bredde satt til 100% av forelder-elementet.
+*/
 .img_stor img{
     width: 100%;
 
 }
+/* 
+display:Elementet er en flex-container*/
 
 .design{
     display: flex;
@@ -268,10 +416,18 @@ textarea{
 }
 
 /********************************************* aboutside */
+/* background-color:Bakgrunnsfargen er gul.
+*/
 .logos{
     background-color: #d8c707;
 }
 
+/* 
+margin:Ytre margin på 20 piksler.
+display: flex;: Elementet er en flex-container.
+justify-content:  Elementene er jevnt fordelt med plass rundt dem.
+width: Bredde satt til 80% av forelder-elementet.
+flex-wrap:Tillater elementer å bryte til neste linje.*/
 .logos section{
 margin: 20px; 
 display:flex;
@@ -281,11 +437,15 @@ margin: 20px;
 flex-wrap: wrap;
 }
 
-
+/*margin:Ytre margin på 0 på topp/bunn og 30 piksler på venstre/høyre.
+*/
 .logos img{
     margin: 0px 30px;
 }
-
+/* display:Elementet er en flex-container.
+justify-content: space-evenly;: Elementene er jevnt fordelt i beholderen.
+flex-wrap:Tillater elementer å bryte til neste linje.
+align-items: Elementene er justert til toppen av beholderen.*/
 .contact{
     display:flex;
     flex-direction: row;
@@ -293,22 +453,27 @@ flex-wrap: wrap;
     flex-wrap: wrap;
     align-items:flex-start;
 }
-
+/*
+margin:Ytre margin på 20 piksler.
+padding:Indre margin på 20 piksler.*/
 .contact section{
     width: 30%;
     margin: 20px;
     padding: 20px;
 }
-
+/* display:Elementet er en flex-container*/
 .contact form{
     display:flex;
     flex-direction: column;
 }
-
+/* padding:Legger til en indre margin på 10 piksler rundt avsnitt i .right-panel.*/
 .right-panel p{
     padding: 10px;
 }
-
+/* 
+width:Setter bredden til iframen til 100% av sin beholder.
+height:Setter høyden til iframen til 450 piksler.
+border:Fjerner rammen rundt iframen.*/
 .map iframe{
     width:100%;
     height:450px;
@@ -317,6 +482,16 @@ flex-wrap: wrap;
 
 
 /********************************************* footer */
+/*
+ grid-area:Plasserer footer i et område definert i en CSS Grid-layout.
+background-color:Setter bakgrunnsfargen til svart.
+color:Setter tekstfargen til hvit.
+display:Gjør footer til en fleksibel beholder.
+flex-direction:Justerer barn-elementene horisontalt.
+align-items: Sentrerer barn-elementene vertikalt.
+justify-content:Fordeler barn-elementene jevnt i footeren.
+padding:Legger til padding på 30 piksler horisontalt.
+height: Setter høyden på footeren til 300 piksler. */
 footer{
     grid-area: footer;
     background-color: black;
@@ -328,6 +503,10 @@ footer{
     padding: 0px 30px;
     height: 300px;
 }
+
+/* 
+color:Setter tekstfargen til hvit for lenker inne i .oss.
+font-size:Setter en veldig stor skriftstørrelse. */
 .oss a{
     color: #fff;
     font-size:xx-large;
@@ -335,22 +514,29 @@ footer{
 
 
 /********************************************* hover */
+/* 
+background-color:Endrer bakgrunnsfargen til svart når musen svever over.
+color:Endrer tekstfargen når musen svever over.*/
 .button:hover{
     background-color: black;
     color: #d8a707;
 }
+/* background-color: Endrer bakgrunnsfargen til svart for liste-elementer */
 .protfolio li:hover{
     background-color: black;
 }
+/* color:Endrer tekstfargen for lenker i*/
 .protfolio a:hover{
     color: #d8a707;
 }
-
+/* width:Endrer bredden til 48% ved hover.
+transition:Legger til en overgangseffekt som varer i 0.4 sekunder. */
 .img_stor:hover{
     width: 48%;
     transition: 0.4s;
 }
-
+/* width:Øker bredden til 103% ved hover.
+transition:Legger til en overgangseffekt. */
 .design figure img:hover, .Branding figure img:hover{
     width: 103%;
     transition: 0.4s;
@@ -364,9 +550,14 @@ footer{
 /********************************************* mobile */
 
 @media only screen and (max-width: 788px){
-
-    body{
-        font-size:18px;
+   /* Setter standard skriftstørrelse til 18 piksler. Dette kan bidra til bedre lesbarhet på mindre skjermer.  
+   */  
+   /* Definerer et grid-layout med bestemte områder for nav, header, main, og footer. 
+   Hvert område tar en egen rad, noe som betyr at de vil stables vertikalt. */
+   /*Setter bredden på kolonner i grid-layoutet til å automatisk tilpasse seg tilgjengelig plass.*/ 
+   /* Definerer høyden på hver rad i grid-layoutet til å automatisk tilpasse seg innholdet. Det er fire rader, en for hvert område. */
+   body{
+      font-size:18px;
         grid-template-areas: 
         "nav" 
         "header" 
@@ -376,7 +567,15 @@ footer{
         grid-template-rows: auto auto auto auto;
 
     }
+/* Gjør navigasjonselementet til en fleksibel beholder. Dette er nyttig for å plassere barn-elementene (som lenker) inni navigasjonsbaren.
+Endrer retningen til flex-elementene til å være vertikal (kolonne). Dette betyr at elementene innenfor navigasjonsbaren vil stables vertikalt, 
+i motsetning til den horisontale standardoppstillingen på større skjermer.
+Sentrerer barn-elementene horisontalt innenfor navigasjonsbaren.
+Fordeler barn-elementene jevnt innenfor navigasjonsbaren, med likt mellomrom mellom elementene og langs kantene.
+Setter høyden på navigasjonsbaren til å tilpasse seg automatisk basert på innholdet.
+Legger til en indre margin på 10 piksler rundt innholdet i navigasjonsbaren.
 
+*/
     nav{
         background-color: #fff;
         display:flex;
@@ -387,6 +586,14 @@ footer{
         padding: 10px;
     }
 
+/*
+list-style-type:Fjerner listemarkører, noe som er vanlig for navigasjonsmenyer.
+display: Gjør listen til en fleksibel beholder.
+flex-direction: Endrer retningen til flex-elementene til å være vertikal, slik at listepunkter stables over hverandre.
+align-items:Sentrerer listeelementene horisontalt innenfor listen.
+padding:Setter padding til null, noe som kan bidra til å fjerne standardmarginer
+*/
+
     nav ul{
         list-style-type: none;
         display:flex;
@@ -395,6 +602,15 @@ footer{
         padding: 0px;
     }
 /***********************header*************************************/
+   /*  
+display:Gjør headeren til en fleksibel beholder, noe som gjør det lettere å plassere elementer inni headeren.
+flex-direction:Setter retningen til elementene innenfor headeren vertikalt (i en kolonne).
+justify-content:Sentrerer elementene vertikalt inne i headeren
+align-items:Sentrerer elementene horisontalt inne i headeren
+height:Setter høyden på headeren til 400 piksler
+width:Gjør at headeren strekker seg over hele bredden av skjermen.
+margin:Fjerner eventuell ytre margin rundt headeren.   */
+    
     header{
         display:flex;
         flex-direction:column;
@@ -405,14 +621,29 @@ footer{
         margin: 0px;
     }
 
+/*
+display: none; Skjuler videoen. */
+
     .for_head video{
         display: none;
     }
+
+    /* 
+background-color:Setter en bakgrunnsfarge med gjennomsiktighet (angitt av 95 i fargekoden).
+width:Setter bredden på seksjonen til å fylle hele bredden av sin beholder.
+height:Setter høyden på seksjonen til 400 piksler. */
+
     header section{
         background-color:#d5e5eb95;
         width: 100%;
         height: 400px;
     }
+
+    /* 
+
+padding:Setter en indre margin (padding) på 20 piksler rundt innholdet.
+width:Setter bredden til 80% av sin beholder.
+text-align:Sentrerer teksten innenfor elementet. */
     .head_text{
         padding: 20px;
         width: 80%;
@@ -420,41 +651,68 @@ footer{
     }
     
 /**********************forside***********************************/
+    /*
+
+flex-direction:Setter retningen til elementene innenfor .abot_company vertikalt
+justify-content:Sentrerer elementene vertikalt
+padding:Setter en indre margin på 40 piksler på toppen/bunnen og 50 piksler på sidene. */
     .abot_company{
         flex-direction:column;
         justify-content:center;
         padding: 40px 50px;
     }
-    
+    /* 
+width: Setter bredden til 95% av sin beholder.
+height: aGjør at høyden tilpasses automatisk for å bevare bildet.
+margin-bottom:Setter en margin på 20 piksler på bunnen av bildet.
+margin-right:Fjerner margin på høyre side av bildet. */
     .abot_company img{
         width: 95%;
         height:  auto;
         margin-bottom: 20px;
         margin-right: 0px
     }
+/* 
 
+width:Setter bredden på avsnittet til å fylle hele bredden av sin beholder. */
     .abot_company p{
         width: 100%;
     }
 /*********************protfolio****************************/        
+    /* 
+
+flex-wrap: Gjør at listeelementer kan bryte linjen og fortsette på neste linje om det ikke er nok plass. */
     .explore ul{
         flex-wrap: wrap;
     }
+/* 
 
+align-items:Sentrerer elementene horisontalt. */
     .protfolio article{
         align-items: center;
     }
-    
+    /* 
+flex-direction:Setter retningen til elementene vertikalt.
+align-items:Sentrerer elementene horisontalt. */
     .design, .Branding{
         flex-direction:column;
         align-items	: center;
     }
     
+/* 
+width: Setter bredden til 90% av sin beholder.
+margin:Setter en ytre margin på 5 piksler rundt bildene.
+*/
     .design figure img, .Branding figure img, .img_stor img{
         width: 90%;
         margin: 5px;
     }    
- 
+ /* 
+display:Gjør disse elementene til fleksible beholdere.
+flex-direction:Setter retningen til elementene vertikalt.
+align-items:Sentrerer elementene horisontalt.
+width:Setter bredden til 90% av sin beholder.
+margin:Setter en ytre margin på 5 piksler. */
     .design figure, .Branding figure, .img_stor{
         display: flex;
         flex-direction:column;
@@ -462,7 +720,11 @@ footer{
         width: 90%;
         margin: 5px;
     }
+/* 
 
+display: Gjør disse elementene til fleksible beholdere.
+flex-direction: Setter retningen til elementene vertikalt.
+align-items: Sentrerer elementene horisontalt. */
     .design picture, .Branding picture, .img_stor picture{
         display: flex;
         flex-direction:column;
@@ -470,19 +732,34 @@ footer{
     }
 
 /******************************************* aboutside*****************************************/
+/* width:Setter bredden på elementet til 80% av bredden til sin beholder.
+margin:Legger til en ytre margin på 20 piksler på alle sider av elementet.
+padding:Legger til en indre margin (padding) på 20 piksler på alle sider inni elementet.
+height:Setter høyden til å tilpasse seg automatisk basert på innholdets størrelse. */
     .Company_info{
         width: 80%; 
         margin: 20px;
         padding: 20px;
         height: auto;
     }
+    /* 
+align-items: Sentrerer barn-elementene vertikalt innenfor fleksible .*/
     .Company{
         align-items	: center;
     }    
+    /* 
+
+display:Gjør elementet til en fleksibel beholder.
+flex-direction:Arrangerer barn-elementene i en vertikal kolonne */
     .contact{
         display:flex;
         flex-direction: column;
     }
+    /* 
+
+width:Setter bredden på disse seksjonene til 80% av bredden til sin beholder
+margin: Legger til en ytre margin på 10 piksler rundt seksjonene
+padding:Legger til en indre margin på 10 piksler inni seksjonene */
     .contact section{
         width: 80%;
         margin: 10px;
@@ -490,7 +767,15 @@ footer{
     }
 
 /*********************footer******************************/
-    footer{
+/* 
+
+display:Gjør footeren til en fleksibel beholder.
+flex-direction:Setter retningen til barn-elementene vertikalt.
+align-items:Sentrerer barn-elementene horisontalt.
+justify-content: Fordeler barn-elementene jevnt i footeren, med like avstander mellom dem.
+padding:Setter padding til null på alle sider.
+height:Setter høyden til å tilpasse seg automatisk etter innholdet. */    
+footer{
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -498,7 +783,10 @@ footer{
         padding: 0px 0px;
         height: auto;
     }
-    
+    /* 
+
+flex-direction:Arrangerer listeelementene horisontalt.
+padding:Fjerner all indre margin (padding) fra listen.*/
     footer ul{
         flex-direction:row;
         padding: 0px;
@@ -506,6 +794,12 @@ footer{
 
 
 /***************************************************/
+/*
+
+background-color: Endrer bakgrunnsfargen til en gyllen nyanse når musepekeren svever over knappen.
+color:Setter teksten tilbake til standardfargen under hover.
+background-color:Tilbakestiller bakgrunnsfargen til standard under hover.
+color:Tilbakestiller lenkefargen til standard under hover.*/
 .button:hover{
     background-color: #d8c707;
     color: initial;
@@ -516,7 +810,8 @@ footer{
 .protfolio a:hover{
     color:initial;
 }
-
+/* 
+Endrer bredden på bildene til 90% av deres beholder ved hover. */
 .img_stor:hover, .design figure img:hover, .Branding figure img:hover{
     width: 90%;
 }

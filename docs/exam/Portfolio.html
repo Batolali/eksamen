@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="nb">
 <head>
-        <!-- Hodet inneholder metadata og lenker til stilark og skript -->
 
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<!--Lenker til et stilark, som Font Awesome for ikoner-->
-    <!--Lenker til et eksternt CSS-stilark-->
+    <!-- Lenker til et eksternt stilark CSS-fil som definerer hvordan nettsiden skal se ut-->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 	<title>Webutvikling</title>
         <!-- Tittelen som vises i nettleserens fane -->
@@ -47,11 +46,18 @@
         <!-- Definerer toppteksten på siden-->
         <h1 class="protfolio_head" itemprop="name">Portfolio</h1>
     </header>
-
+<!-- Dette åpner main som er hoveddelen av siden. 
+    role="main" angir semantisk at dette er hovedinnholdet på siden-->
     <main role="main" class="protfolio">
+        <!-- Dette starter en article-element som er en seksjon. 
+            Klassen explore er for stilsetting -->
         <article class="explore" role="article">
+    <!-- En overskrift for artikkelen. Klassen under_line antyder 
+        at det kan være en stilregel som legger til en understrekning-->
             <h2 class="under_line">Explore previous jobs</h2>
             <ul>
+                <!-- Starter en usortert liste som brukes til å organisere 
+                    elementene lenkene i en listeformat -->
                 <li><a href="#B1">Branding</a></li>
                 <li><a href="#B2">Design</a></li>
                 <li><a href="#B3">Development</a></li>
@@ -59,6 +65,10 @@
         </article>
 
         <article>
+
+<!--Hvert li-element representerer et listeelement. 
+    Inne i dette elementet er det en ankerlenke (<a href="#B1">)
+    som når klikket, vil føre brukeren til en del av siden med ID B1-->
             <h2 class="under_line" id="B1">Branding</h2>
             <section class="Branding">
                 <figure>
@@ -69,7 +79,9 @@
                 </figure>
 
                 <figure>
+                    <!--  flere figure elementer for å vise flere bilder og bildetekster-->
                     <picture>
+                        <!-- Et bilde element  -->
                         <img src="photo/400X400.jpg" alt="400X400 image">
                     </picture>
                     <figcaption>Lorem Ipsum has been the</figcaption>
@@ -82,7 +94,7 @@
                     <figcaption>Lorem Ipsum has been the</figcaption>
                 </figure>
             </section>
-
+<!--  Et annet figure men denne gangen med en større bilde-->
             <figure class="img_stor">
                 <picture>
                     <img src="photo/800X800.jpg" alt="800X800 image">
@@ -90,7 +102,6 @@
                 <figcaption>Lorem Ipsum has been the</figcaption>
             </figure>        
         </article>
-
         <article>
             <h2 class="under_line" id="B2">Design</h2>
             <section class="Branding">
@@ -135,6 +146,8 @@
                 </figure>
             </section>
         </article>
+        <!--  Dette er en knapp for å rulle tilbake til toppen av siden. 
+            Klassen up  brukte CSS for å posisjonere elementet, og bildet pil.png brukes som en visuell bildet for pil -->
         <div class="up"><a href="#"><img src="photo/pil.png" alt="Go to page top" ></a></div>
 
     </main>
